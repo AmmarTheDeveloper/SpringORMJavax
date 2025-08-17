@@ -106,6 +106,9 @@ public class App {
 
 			System.out.println("Enter student age: ");
 			int sage = Integer.parseInt(br.readLine());
+			
+			st.setName(sname);
+			st.setAge(sage);
 
 			studentDao.update(st);
 
@@ -163,7 +166,6 @@ public class App {
 					System.err.println("Select a valid option!!!");
 					System.out.println("************************************************************");
 					break;
-
 				}
 
 				if (choice == 6) {

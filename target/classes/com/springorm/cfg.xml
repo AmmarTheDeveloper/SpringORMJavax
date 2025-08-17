@@ -24,7 +24,7 @@
   	<!--  hibernate properties -->
   	<property name="hibernateProperties">
   		<props>
-  			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+  			<prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
   			<prop key="hibernate.show_sql">true</prop>
   			<prop key="hibernate.hbm2ddl.auto">update</prop>
   		</props>
@@ -45,7 +45,6 @@
   <bean class="com.springorm.dao.StudentDao" name="studentDao" >
   	<property name="hibernateTemplate" ref="hibernateTemplate" />
   </bean>
-  
   
   <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
   	<property name="sessionFactory" ref="factory" />
